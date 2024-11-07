@@ -1,0 +1,71 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #1a1a1a;
+}
+
+.logo a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffc107; /* A bright color for hover */
+}
+
+.account-actions {
+    display: flex;
+    align-items: center;
+}
+
+.login-btn, .signup-btn {
+    margin-left: 15px;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.login-btn {
+    color: #fff;
+    background-color: transparent;
+}
+
+.signup-btn {
+    color: #fff;
+    background-color: #ffc107;
+    border-radius: 4px;
+}
+
+.signup-btn:hover, .login-btn:hover {
+    background-color: #e0a800; /* Slightly darker hover effect */
+}
