@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Sign Up</title>
+    <title>Forgot Password</title>
     <style>
         /* General Reset */
         * {
@@ -24,8 +24,8 @@
             font-family: Arial, sans-serif;
         }
 
-        /* Signup Container */
-        .signup-container {
+        /* Forgot Password Container */
+        .forgot-password-container {
             background-color: #333;
             padding: 40px;
             border-radius: 8px;
@@ -35,10 +35,17 @@
         }
 
         /* Form Heading */
-        .signup-form h2 {
+        .forgot-password-form h2 {
             color: #fff;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             text-align: center;
+        }
+
+        .instructions {
+            color: #bbb;
+            font-size: 0.9rem;
+            text-align: center;
+            margin-bottom: 20px;
         }
 
         /* Form Group */
@@ -63,27 +70,8 @@
             color: #fff;
         }
 
-        /* Form Options */
-        .form-options {
-            margin-bottom: 20px;
-        }
-
-        .terms {
-            color: #bbb;
-            font-size: 0.9rem;
-        }
-
-        .terms a {
-            color: #ffc107;
-            text-decoration: none;
-        }
-
-        .terms a:hover {
-            color: #e0a800;
-        }
-
-        /* Signup Button */
-        .signup-btn {
+        /* Reset Button */
+        .reset-btn {
             width: 100%;
             padding: 10px;
             border: none;
@@ -95,7 +83,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .signup-btn:hover {
+        .reset-btn:hover {
             background-color: #e0a800;
         }
 
@@ -136,40 +124,18 @@
             <a href="signup.html" class="signup-btn">Sign Up</a>
         </div>
     </nav>
-    <div class="signup-container">
-        <form class="signup-form" action="/signup" method="post">
-            <h2>Create Your Account</h2>
+    <div class="forgot-password-container">
+        <form class="forgot-password-form" action="/reset-password" method="post">
+            <h2>Forgot Password</h2>
+            <p class="instructions">Enter your email address to receive a link to reset your password.</p>
 
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Choose a username" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Email</label>
+                <label for="email">Email Address</label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
 
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" placeholder="Create a password" required>
-            </div>
-
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password"
-                    required>
-            </div>
-
-            <div class="form-options">
-                <label class="terms">
-                    <input type="checkbox" name="terms" required> I agree to the <a href="#terms">Terms and
-                        Conditions</a>
-                </label>
-            </div>
-
-            <button type="submit" class="signup-btn">Sign Up</button>
-            <p class="login-text">Already have an account? <a href="login.html">Log In</a></p>
+            <button type="submit" class="reset-btn">Send Reset Link</button>
+            <p class="login-text">Remembered your password? <a href="login.html">Log In</a></p>
         </form>
     </div>
 
